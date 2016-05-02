@@ -61,3 +61,9 @@ var clickHandler = function(){
       
     })
 }
+
+featureLayer.on('ready', function(){
+  	this.eachLayer)function(later){
+      layer.on('click', clickHandler);
+    })
+})
