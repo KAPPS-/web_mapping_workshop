@@ -56,6 +56,8 @@ var clickHandler = function(){
       	if(feature.properties.phone){
           info += '<p>' + feature.properties.phone + '</p>';
         }
+      info += '</div>';
+      $('#info').append(info);
       
     })
 }
