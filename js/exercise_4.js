@@ -16,3 +16,11 @@ var map = L.mapbox.map('map', mapId);
 map.setView([39, -96], 4);
 
 // Great, now we have a basic web map!
+
+var dataFileToAdd = 'https://gist.githubusercontent.com/KAPPS-/6e6561d352f7fc062ff9f0e785367154/raw/117433d23a9f07a76122e47e70e8ffe39c816fdd/turbo.geojson';
+
+var featureLayer = L.mapbox.featureLayer();
+	featureLayer.loadURL(dataFileToAdd);
+	featureLayer.addTo(map);
+
+
