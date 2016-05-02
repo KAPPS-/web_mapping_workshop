@@ -40,3 +40,11 @@ featureLayer.on('ready', function(){
       	layer.bindPopup('Welcome to ' + layer.feature.properties.name);
     })
 })
+
+var clickHandler = function(){
+	$('#info').empty();
+  
+  	var feature = e.target.feature;
+  
+  	$('#sidebar')
+}
