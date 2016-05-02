@@ -46,5 +46,7 @@ var clickHandler = function(){
   
   	var feature = e.target.feature;
   
-  	$('#sidebar')
+  	$('#sidebar').fadeIn(400, function(){
+      
+    })
 }
