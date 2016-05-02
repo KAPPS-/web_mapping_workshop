@@ -34,35 +34,40 @@ featureLayer.on('ready', function(){
    	map.fitBounds(featureLayer.getBounds());
 })
 
-///featureLayer.on('ready', function(){
-//  	this.eachLayer(function(layer){
-//      	layer.bindPopup('Welcome to ' + layer.feature.properties.name);
+//featureLayer.on('ready', function(){
+//	this.eachLayer(function(layer){
+//    	layer.bindPopup('Welcome to ' + layer.feature.properties.name);
 //    })
 //})
 
-var clickHandler = function(){
+var clickHandler = function(e){
 	$('#info').empty();
   
   	var feature = e.target.feature;
   
   	$('#sidebar').fadeIn(400, function(){
-      	var info = '';
+    	var info = '';
       
       	info += '<div>';
       	info += '<h2>' + feature.properties.name + '</h2>'
-        if(feature.properties.cuisine) info += '<p>' + feature.properties.cuisine)  info += '<p>' + 
- feature.properties.cuisine + '</p>';
-      	if(feature.properties.phone){
+        if(feature.properties.cuisine){
+          info += '<p>' + feature.properties.cuisine + '</p>';
+        }
+        if(feature.properties.phone){
           info += '<p>' + feature.properties.phone + '</p>';
         }
-      info += '</div>';
-      $('#info').append(info);
-      
+      	if(feature.properties.website){
+          info += '<p><a href="' + feature.properties.website + '">' + feature.properties.website + '</a></p>';
+        }
+      	info += '</div>';
+      	$('#info').append(info);
     })
 }
 
 featureLayer.on('ready', function(){
-  	this.eachLayer)function(later){
-      layer.on('click', clickHandler);
+	this.eachLayer(function(layer){
+    	layer.on('click', clickHandler);
     })
 })
+
+
