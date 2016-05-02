@@ -47,6 +47,15 @@ var clickHandler = function(){
   	var feature = e.target.feature;
   
   	$('#sidebar').fadeIn(400, function(){
+      	var info = '';
+      
+      	info += '<div>';
+      	info += '<h2>' + feature.properties.name + '</h2>'
+        if(feature.properties.cuisine) info += '<p>' + feature.properties.cuisine)  info += '<p>' + 
+ feature.properties.cuisine + '</p>';
+      	if(feature.properties.phone){
+          info += '<p>' + feature.properties.phone + '</p>';
+        }
       
     })
 }
